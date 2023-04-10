@@ -2,10 +2,11 @@ package domain;
 
 import java.util.Objects;
 
+import static constant.Rules.MAXIMUM_NUMBER;
+import static constant.Rules.MINIMUM_NUMBER;
+
 public class BallNumber {
     private final int number;
-    private static final int MINIMUM_NUMBER = 1;
-    private static final int MAXIMUM_NUMBER = 9;
 
     public BallNumber(int number) {
         validateNumber(number);

@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Ball {
     private final BallNumber ballNumber;
 
-    public Ball(BallNumber ballNumber) {
+    private Ball(BallNumber ballNumber) {
         this.ballNumber = ballNumber;
     }
 
@@ -20,5 +20,13 @@ public class Ball {
     @Override
     public int hashCode() {
         return Objects.hash(ballNumber);
+    }
+
+    public static Ball createGameBall(GameBallNumberStrategy gameBallNumberStrategy) {
+        return Ball.create(gameBallNumberStrategy.createGameBallNumber());
+    }
+
+    public static Ball create(BallNumber ballNumber) {
+        return new Ball(ballNumber);
     }
 }

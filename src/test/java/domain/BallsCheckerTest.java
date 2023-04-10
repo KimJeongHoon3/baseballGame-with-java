@@ -27,9 +27,9 @@ class BallsCheckerTest {
     }
 
     private Balls createBalls(int firstNumber, int secondNumber, int thirdNumber) {
-        Ball firstBall = new Ball(new BallNumber(firstNumber));
-        Ball secondBall = new Ball(new BallNumber(secondNumber));
-        Ball thirdBall = new Ball(new BallNumber(thirdNumber));
+        Ball firstBall = Ball.create(new BallNumber(firstNumber));
+        Ball secondBall = Ball.create(new BallNumber(secondNumber));
+        Ball thirdBall = Ball.create(new BallNumber(thirdNumber));
         return new Balls(Arrays.asList(firstBall, secondBall, thirdBall));
     }
 }
